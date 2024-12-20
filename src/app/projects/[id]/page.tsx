@@ -14,8 +14,8 @@ export async function generateStaticParams() {
   }));
 }
 
-const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
-  const { id } = params;
+const ProjectPage: React.FC<ProjectPageProps> = async ({ params }) => {
+  const { id } = await params;
   const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
