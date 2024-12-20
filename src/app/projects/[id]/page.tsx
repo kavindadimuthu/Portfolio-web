@@ -2,14 +2,21 @@ import React from 'react';
 import { projects } from '../../../data/projects';
 import ProjectDetails from '../../../components/ProjectDetails';
 
+interface ProjectPageProps {
+  params: {
+    id: string;
+  };
+}
+
 export async function generateStaticParams() {
   return projects.map((project) => ({
     id: project.id.toString(),
   }));
 }
 
-const ProjectPage = ({ params }: { params: { id: string } }) => {
-  const project = projects.find((p) => p.id === parseInt(params.id));
+const ProjectPage: React.FC<ProjectPageProps> = async ({ params }) => {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
     return <div>Project not found</div>;
@@ -19,4 +26,3 @@ const ProjectPage = ({ params }: { params: { id: string } }) => {
 };
 
 export default ProjectPage;
-
