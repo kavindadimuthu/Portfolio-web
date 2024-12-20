@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
           <h2 className="text-3xl mb-8">Full Stack Developer & Designer</h2>
           <p className="text-xl mb-8">Crafting impactful solutions and engaging user experiences</p>
           <Link href="#contact" className="btn">
-            Let's Connect
+            Let&apos;s Connect
           </Link>
         </div>
         <div className="md:w-1/2 flex justify-center">
