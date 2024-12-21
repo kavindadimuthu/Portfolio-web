@@ -1,5 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/globals.css';
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={`${inter.className} bg-black text-gray-200 min-h-screen`}>
         <Header />
         <main>{children}</main>
+        <Analytics />
         <Footer />
       </body>
     </html>
