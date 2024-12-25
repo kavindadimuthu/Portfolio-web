@@ -3,10 +3,10 @@ import { Project } from '../types/project';
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Tyre Shop Website',
+    title: '3D Audio Visualizer',
     description: 'A full-stack e-commerce platform for a tyre shop, built with the MERN stack.',
     longDescription: 'This comprehensive e-commerce platform for a tyre shop showcases the power and flexibility of the MERN (MongoDB, Express.js, React, Node.js) stack. The website offers a seamless shopping experience for customers looking to purchase tyres online. It features a responsive design, real-time inventory management, secure payment processing, and a user-friendly admin panel for easy product and order management.',
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+    technologies: ['React', 'Three.js', 'Tailwind CSS'],
     features: [
       'User authentication and authorization',
       'Product catalog with advanced filtering',
@@ -16,7 +16,7 @@ export const projects: Project[] = [
       'Order tracking system',
     ],
     images: [
-      '/projects/project_1.jpg',
+      '/projects/audio-visualizer.png',
       '/placeholder.svg?height=300&width=400',
       '/placeholder.svg?height=300&width=400',
       '/placeholder.svg?height=300&width=400',
@@ -29,10 +29,10 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: 'Real-time Cryptocurrency Tracker',
+    title: '3D Solar Sytem',
     description: 'A web application that provides real-time tracking of cryptocurrency prices and market trends.',
     longDescription: 'This real-time cryptocurrency tracker offers users up-to-the-second information on various cryptocurrencies. Built with React for the frontend and Node.js for the backend, it utilizes WebSocket connections to stream live data from multiple cryptocurrency exchanges. The application features interactive charts, price alerts, and portfolio tracking capabilities.',
-    technologies: ['React', 'Node.js', 'WebSocket', 'Chart.js'],
+    technologies: ['React', 'Three.js', 'Tailwind CSS'],
     features: [
       'Real-time price updates',
       'Interactive price charts',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
       'News feed integration',
     ],
     images: [
-      '/projects/project_2.jpg',
+      '/projects/solar-system.png',
       '/placeholder.svg?height=300&width=400',
       '/placeholder.svg?height=300&width=400',
       '/placeholder.svg?height=300&width=400',
