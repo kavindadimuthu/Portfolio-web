@@ -28,7 +28,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             </span>
           ))}
         </div>
-        <Link href="/#projects" className="btn block text-center">
+        <Link href={`/projects/${project.id}`} className="btn block text-center">
           View Details
         </Link>
       </div>
