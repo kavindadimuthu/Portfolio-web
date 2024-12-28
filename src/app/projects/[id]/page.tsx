@@ -8,7 +8,11 @@ export async function generateStaticParams() {
   }));
 }
 
-const ProjectPage = ({ params }: { params: { id: string } }) => {
+interface PageProps {
+  params: { id: string };
+}
+
+const ProjectPage: React.FC<PageProps> = ({ params }) => {
   const project = projects.find((p) => p.id === parseInt(params.id));
 
   if (!project) {
