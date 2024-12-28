@@ -2,7 +2,7 @@ import React from 'react';
 
 const About: React.FC = () => {
   return (
-    <section id="about" className="bg-gray-900 min-h-screen flex items-center py-20">
+    <section id="about" className="bg-gray-900 min-h-screen flex items-center py-20 section-padding">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">About Me</h2>
         <div className="max-w-6xl mt-4 mx-auto bg-gray-800 rounded-xl shadow-lg p-12">

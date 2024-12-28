@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-black min-h-screen flex items-center relative overflow-hidden">
+    <section className="bg-black min-h-screen flex items-center relative overflow-hidden pt-20">
       <div className="absolute inset-0 grid-pattern opacity-100"></div>
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
         <div className="md:w-1/2 text-center md:text-left mb-8 md:mb-0">

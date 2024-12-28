@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-black min-h-screen flex items-center py-20">
+    <section id="contact" className="bg-black min-h-screen flex items-center py-20 section-padding">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Contact Me</h2>
         <form onSubmit={handleSubmit} className="max-w-2xl mx-auto bg-gray-800 p-12 rounded-xl shadow-lg">

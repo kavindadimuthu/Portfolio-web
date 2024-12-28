@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <section id="skills" className="bg-black min-h-screen flex items-center py-20">
+    <section id="skills" className="bg-black min-h-screen flex items-center py-20 section-padding">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">

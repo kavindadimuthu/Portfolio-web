@@ -2,10 +2,11 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
 
 const Header: React.FC = () => {
   const [activeSection, setActiveSection] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,16 +34,30 @@ const Header: React.FC = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
+    setIsMenuOpen(false);
   };
 
   return (
-    <header className="bg-black py-4 fixed w-full z-50">
-      <div className="container mx-auto px-4 flex justify-between items-center">
+    <header className="bg-black py-4 fixed w-full z-50 h-20"> {/* Added h-20 class */}
+      <div className="container mx-auto px-4 flex justify-between items-center h-full">
         <Link href="/" className="text-2xl font-bold">Kavinda Dewmith</Link>
-        <nav>
-          <ul className="flex space-x-4">
+        <button
+          className="lg:hidden text-white focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
+        <nav className={`lg:flex ${isMenuOpen ? 'flex' : 'hidden'} flex-col lg:flex-row absolute lg:relative top-full left-0 lg:top-auto lg:left-auto w-full lg:w-auto bg-black lg:bg-transparent pb-4 lg:pb-0 transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-100' : 'opacity-0 lg:opacity-100'}`}>
+          <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-4 items-center">
             {['about', 'skills', 'projects', 'contact'].map((section) => (
               <li key={section}>
                 <button
@@ -56,15 +71,15 @@ const Header: React.FC = () => {
               </li>
             ))}
           </ul>
+          <div className="flex space-x-4 mt-4 lg:mt-0 justify-center lg:justify-start">
+            <a href="https://github.com/kavindadimuthu" target="_blank" rel="noopener noreferrer">
+              <FaGithub className="text-2xl hover:text-blue-500" />
+            </a>
+            <a href="https://www.linkedin.com/in/kavinda-dewmith-1747b8268" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className="text-2xl hover:text-blue-500" />
+            </a>
+          </div>
         </nav>
-        <div className="flex space-x-4">
-          <a href="https://github.com/kavindadimuthu" target="_blank" rel="noopener noreferrer">
-            <FaGithub className="text-2xl hover:text-blue-500" />
-          </a>
-          <a href="https://www.linkedin.com/in/kavinda-dewmith-1747b8268" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin className="text-2xl hover:text-blue-500" />
-          </a>
-        </div>
       </div>
     </header>
   );
