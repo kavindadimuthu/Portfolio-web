@@ -9,11 +9,12 @@ export async function generateStaticParams() {
 }
 
 interface PageProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-const ProjectPage: React.FC<PageProps> = ({ params }) => {
-  const project = projects.find((p) => p.id === parseInt(params.id));
+const ProjectPage = async ({ params }: PageProps) => {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === parseInt(id));
 
   if (!project) {
     return <div>Project not found</div>;
