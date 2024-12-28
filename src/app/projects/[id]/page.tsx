@@ -2,11 +2,11 @@ import React from 'react';
 import { projects } from '../../../data/projects';
 import ProjectDetails from '../../../components/ProjectDetails';
 
-type PageProps = {
+interface PageProps {
     params: {
       id: string;
     };
-  };
+  }
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
