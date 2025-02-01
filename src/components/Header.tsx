@@ -50,7 +50,7 @@ const Header: React.FC = () => {
     <header className="bg-black py-4 fixed w-full z-50 h-20"> {/* Added h-20 class */}
       <div className="container mx-auto px-4 flex justify-between items-center h-full">
         <div className='flex items-center space-x-4'>
-          <img src="/android-chrome-192x192.png" alt="" width="50px"/>
+          <img src="/android-chrome-192x192.png" alt="" width="40px"/>
           <Link href="/" className="text-2xl font-bold">Kavinda Dewmith</Link>
         </div>
         <button
