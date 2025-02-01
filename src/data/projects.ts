@@ -5,26 +5,37 @@ export const projects: Project[] = [
     "id": 1,
     "title": "Omilga Tyreshop Frontend",
     "description": "Frontend for the Omilga Tyreshop e-commerce platform, built with React and Vite.",
-    "longDescription": "This project is the frontend component of the Omilga Tyreshop e-commerce platform. It is built using React and Vite to provide a fast and responsive user interface for customers looking to purchase tyres online. The frontend interacts with the backend to display products, handle user authentication, and manage the shopping cart and checkout process.",
-    "technologies": ["React", "Vite", "JavaScript", "CSS", "HTML"],
+    "longDescription": "This project is the frontend component of the Omilga Tyreshop e-commerce platform. It is built using React and Vite to provide a fast and responsive user interface for customers looking to purchase tyres online. The frontend interacts with the backend to display products and handle user authentication.",
+    "technologies": [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Axios",
+      "Node.js",
+      "Express.js",
+      "MongoDB (Mongoose)",
+      "JWT for authentication"
+    ],
     "features": [
-      "User authentication and authorization",
-      "Product catalog with advanced filtering",
-      "Shopping cart functionality",
-      "Secure checkout process",
-      "Responsive design"
+      "Display available tyres with detailed information",
+      "Showcase services provided by the tyreshop",
+      "User authentication (login and signup)",
+      "User profile management",
+      "Admin dashboard for managing products",
+      "Responsive design for a seamless experience on all devices"
     ],
     "images": [
-      "/projects/tyreshop.png",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400"
+      "/projects/omilga-screenshots/homepage-hero.png",
+      "/projects/omilga-screenshots/products-catalogue.png",
+      "/projects/omilga-screenshots/services.png",
+      "/projects/omilga-screenshots/admin-dashboard.png",
+      "/projects/omilga-screenshots/profile.png"
     ],
-    "liveUrl": "https://omilga-tyreshop-frontend.vercel.app",
+    "liveUrl": "https://omilga-tyreshop.vercel.app",
     "githubUrl": "https://github.com/kavindadimuthu/Omilga-Tyreshop-Frontend",
     "challenges": "One of the main challenges was ensuring a smooth and fast user experience with real-time updates from the backend. This was solved by optimizing the React components and using Vite for fast development and build processes.",
-    "futureImprovements": "Future plans include adding more advanced filtering options, improving the user interface, and integrating more payment gateways."
+    "futureImprovements": "Future plans include adding ordering and checkout functionalities, implementing a shopping cart, adding more advanced filtering options, improving the user interface, and integrating more payment gateways."
   },
   {
     id: 2,
@@ -42,10 +53,6 @@ export const projects: Project[] = [
     ],
     images: [
       '/projects/solar-system.png',
-      '/placeholder.svg?height=300&width=400',
-      '/placeholder.svg?height=300&width=400',
-      '/placeholder.svg?height=300&width=400',
-      '/placeholder.svg?height=300&width=400'
     ],
     liveUrl: 'https://kavindadimuthu.github.io/3D-Solar-system/',
     githubUrl: 'https://github.com/kavindadimuthu/3D-Solar-system',
@@ -67,10 +74,6 @@ export const projects: Project[] = [
     ],
     "images": [
       "/projects/audio-visualizer.png",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400"
     ],
     "liveUrl": "https://kavindadimuthu.github.io/3D-Audio-visualizer/",
     "githubUrl": "https://github.com/kavindadimuthu/3D-Audio-visualizer",
@@ -92,10 +95,6 @@ export const projects: Project[] = [
     ],
     "images": [
       "/projects/2d-village-scene.png",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400",
-      "/placeholder.svg?height=300&width=400"
     ],
     "liveUrl": "https://example.com/village_scene_demo",
     "githubUrl": "https://github.com/kavindadimuthu/2D-VillageScene-OpenGLProject",
